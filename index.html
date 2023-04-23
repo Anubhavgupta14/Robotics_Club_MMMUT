@@ -5,67 +5,108 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robotics Club | Home</title>
-  <link rel="icon" href="img/favicon-32x32.png" type="image/png" />
-  <!-- custom style -->
-  <link rel="stylesheet" href="src/CSS/style.css" />
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-    
-    
+  <title>Robomania</title>
+  <link rel="icon" href="/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="/images/favicon-enhanced.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<style>
+  html {
+    scroll-behavior: smooth;
 
-<body class="BODY">
-  <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #0a2647; opacity: 0.9;">
-    <div class="container-fluid">
-      <div class="logo_nav" style="margin-left: 10px">
-        <a class="navbar-brand" href="#">
-          <img src="img/rc layout.png" alt="Logo" class="logo" />
-        </a>
-        <a class="navbar-brand" href="#">
-          <img src="img/rc mmm (1).png" alt="Logo" class="logo" />
-        </a>
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .back-top-wrap {
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    background-color: #80F7D1;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    z-index: 100;
+  }
+
+  .back-top-wrap:hover {
+    background-color: #00a2ff;
+    color: #80F7D1;
+  }
+
+  .back-top-wrap:hover .fas.fa-arrow-up {
+    color: white;
+  }
+
+  .fas.fa-arrow-up {
+    color: #00488F;
+    transition: 0.3s ease-in-out;
+  }
+</style>
+
+<body>
+  <!-- Back to top button -->
+  <div id="back-top-div" class="back-top-wrap">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <header>
+    <nav class="nav" id="nav">
+      <div>
+        <a class="navbar-brand" href="#!"> <img src="./images/rc layout.png" alt="Logo" class="logo" /></a>
+        <a class="navbar-brand" href="#!"> <img src="./images/rc mmm (1).png" alt="Logo" class="logo" /></a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active me-2" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-2" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-2" href="#">Our Teams</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-2" href="#">Contact Us</a>
-          </li>
+      
+      <div class="nav-links" id="navLinks">
+        <ul class="links" id="navmenu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES </a></li>
+          <li><a href="#">CONTACT US </a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+      <div class="hamburger" id="ham">
+        <i class="cancel fa-solid fa-xmark"></i>
 
-  <section id="front">
-    <div class="">
-      <h1 class="head">ROBOMANIA</h1>
+        <svg class="burger" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+          </path>
+        </svg>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul class="menu-link">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES </a></li>
+        <li><a href="#">CONTACT US </a></li>
+      </ul>
     </div>
-    <div class="buttons">
-      <button class="Info">
-        <a href="#events" style="text-decoration: none; color: white">Our Events</a>
-      </button>
-      <button class="Info">
-        <a href="#trainers" style="text-decoration: none; color: white">Testonomials</a>
-      </button>
+    <div class="content">
+      <h1>Robomania</h1>
+      <div class="container">
+        <h3><span class="auto-type" style="font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></a></span></h3>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <a href="#events" class="rainbow-button" alt="Events"></a>
     </div>
-  </section>
 
-  
-  <section class="featureclass" id="events" style="background: url(./img/bg.jpg) no-repeat fixed;">
+  </header>
+
+  <section class="featureclass" id="events" style="background: url(./images/bg.jpg) no-repeat fixed;">
     <h1 data-aos="fade-right" data-aos-duration="800" style="color: white;">Our Events</h1>
     <div class="grid">
       <div data-aos="zoom-in-up" data-aos-duration="800" class="card">
@@ -73,7 +114,7 @@
           <div class="img">
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
-          <div class="content">
+          <div class="con">
             <h2 class="title">Robowar</h2>
           </div>
         </a>
@@ -83,7 +124,7 @@
           <div class="img">
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
-          <div class="content">
+          <div class="con">
             <h2 class="title">Laser Strike</h2>
           </div>
         </a>
@@ -94,7 +135,7 @@
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
 
-          <div class="content">
+          <div class="con">
             <h2 class="title">Bomb Diffusion</h2>
           </div>
         </a>
@@ -105,7 +146,7 @@
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
 
-          <div class="content">
+          <div class="con">
             <h2 class="title">Cladding The Code</h2>
           </div>
         </a>
@@ -116,7 +157,7 @@
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
 
-          <div class="content">
+          <div class="con">
             <h2 class="title">Turing</h2>
           </div>
         </a>
@@ -127,7 +168,7 @@
             <img src="https://source.unsplash.com/random/?city,night" alt="" />
           </div>
 
-          <div class="content">
+          <div class="con">
             <h2 class="title">Electro NFS</h2>
           </div>
         </a>
@@ -135,114 +176,122 @@
     </div>
   </section>
 
-  <!-- Testonomials -->
-  <section id="trainers" class="trainers" style="background: url(./img/bg2.jpg) no-repeat fixed; padding: 30px;" >
-    
-      <h1 data-aos="fade-right" data-aos-duration="800" style="text-align: center;">Testimonials</h1>
-    
-    <div class="grid">
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      <div data-aos="fade-right" data-aos-duration="800" class="card">
-        <div class="img">
-          <img style="object-fit: contain;" src="./img/sherlock5.jpg" alt="" srcset="">
-        </div>
-        <div class="trainers-content" style="background-color: #0a2647;">
-          <h2 class="title">Name</h2>
-          <p style="color: white;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, sapiente nisi! Eos veritatis, consectetur id obcaecati,
-            ipsam consequatur fugiat voluptates cum ratione eaque commodi. Mollitia iste qui dicta hic itaque!
-          </p>
-          <span class="Certification">President</span>
-        </div>
-      </div>
-      
 
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer-container">
+      <!--logo and info column-->
+      <div class="col">
+        <!--logo insert-->
+        <img src="./images/rc layout.png" alt="logo" class="footlogo" />
+        <div class="footercontent">
+          <h2 class="footerheading">Robotics Club</h2>
+        </div>
+      </div>
+
+      <!--ADDRESS COLUMN-->
+
+      <div class="footer-side-col">
+        <div class="col">
+          <h3>
+            ADDRESS
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>MMMUT, Gorakhpur</p>
+          <p class="email-id"><a href="mailto:anubhavgu2002@gmail.com">anubhavgu2002@gmail.com</a></p>
+        </div>
+        <!--HOME COLUMN-->
+        <div class="col">
+          <h3>HOME</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li>
+              <a href="#">Contribute</a>
+            </li>
+          </ul>
+        </div>
+        <!-- OUR SERVICES COLUMN
+        <div class="col">
+          <h3>
+            SERVICES
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/audiotherapy">Audio Therapy</a>
+            </li>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/yogatherapy.html">Yoga Therapy</a>
+            </li>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/readingtherapy">Reading Therapy</a>
+            </li>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/talkingtherapy">Talking Therapy</a>
+            </li>
+            <li>
+              <a href="https://www.practo.com/counselling-psychology">Consult a Doctor</a>
+            </li>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/childTherapy">Child Therapy</a>
+            </li>
+            <li>
+              <a href="https://sukoon-stress-free.netlify.app/html/spiritualTherapy">Spiritual Therapy</a>
+            </li>
+          </ul>
+        </div> -->
+        <!--CONTACTS COLUMN-->
+        <div class="col">
+          <h3>
+            CONTACTS
+            <div class="underline"><span></span></div>
+          </h3>
+          <div class="social-menu">
+            <ul>
+              <a href="#" target="_blank">
+                <li id="social-twitter"><i class="fab fa-2x fa-twitter"></i></li>
+              </a>
+              <a href="#" target="_blank">
+                <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+              </a>
+              <a href="#" target="_blank">
+                <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    </div>
+  </footer>
 
-  </section>
-
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-    VANTA.WAVES({
-      el: "#front",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x1f3c,
-    });
+    let navbar = document.querySelector("#nav");
+    let navmenu = document.querySelector("#navmenu");
+
+    window.onscroll = function () {
+      if (window.pageYOffset >= navmenu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+
+    window.onscroll = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('nav-active');
+      } else {
+        navbar.classList.remove('nav-active');
+      }
+    };
+  </script>
+  
+  <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </body>
 
