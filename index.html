@@ -8,7 +8,6 @@
   <title>Robomania</title>
   <link rel="icon" href="/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="/images/favicon-enhanced.png" />
   <meta name="theme-color" content="#000000" />
   <link rel="stylesheet" text="text/CSS"
@@ -100,13 +99,13 @@
       <div class="container">
         <h3><span class="auto-type" style="font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></a></span></h3>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      
       <a href="#events" class="rainbow-button" alt="Events"></a>
     </div>
 
   </header>
 
-  <section class="featureclass" id="events" style="background: url(./images/bg.jpg) no-repeat fixed;">
+  <section class="featureclass" id="events">
     <h1 data-aos="fade-right" data-aos-duration="800" style="color: white;">Our Events</h1>
     <div class="grid">
       <div data-aos="zoom-in-up" data-aos-duration="800" class="card">
@@ -286,6 +285,18 @@
         navbar.classList.remove('nav-active');
       }
     };
+
+    function changebg(){
+      const images = [
+      'linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("./images/wallpaperflare.com_wallpaper.jpg")',
+        'linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("./images/main_bg2.jpg")',
+        'linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("./images/main_bg3.jpg")',
+      ]
+      const section = document.querySelector('header')
+      const bg = images[Math.floor(Math.random()*images.length)];
+      section.style.backgroundImage = bg;
+    }
+    setInterval(changebg,3000);
   </script>
   
   <script src="js/index.js"></script>
