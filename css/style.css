@@ -33,11 +33,12 @@ html{
 body {
   font-family: "Poppins";
   transform: none;
-  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
 }
-#events{
+/* #events{
   background: url(/images/bg.jpg) no-repeat fixed;
-}
+} */
 
 .nav {
   display: flex;
@@ -56,13 +57,22 @@ body {
   backdrop-filter: blur(5px);
   box-shadow: 5px -1px 12px -5px grey;
 }
-
-header {
-  width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url("../images/wallpaperflare.com_wallpaper.jpg");
+.bg{
+  background-image: url(/images/wallpaperflare.com_wallpaper.jpg);
+  min-height: 100%;
+  position: relative;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+header {
+  width: 100%;
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../images/wallpaperflare.com_wallpaper.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; */
   position: relative;
   min-height: 100vh;
   height: 100vh;
