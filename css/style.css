@@ -58,7 +58,7 @@ body {
   box-shadow: 5px -1px 12px -5px grey;
 }
 .bg{
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(../../images/wallpaperflare.com_wallpaper.jpg);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(../../Robotics_Club_MMMUT/images/wallpaperflare.com_wallpaper.jpg);
   min-height: 100%;
   position: relative;
   background-position: center;
